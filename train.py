@@ -19,7 +19,7 @@ from transformers import AutoModelForCausalLM
 import os
 # os.environ['HF_HOME'] = '/scratch/wej36how/RAG2/trasnformers/cache/'
 # os.environ['TRANSFORMERS_CACHE'] = '/scratch/wej36how/RAG2/trasnformers2/cache/'
-
+#Hello from the otehr side
 #from llama import BasicModelRunner
 logger = logging.getLogger(__name__)
 global_config = None
