@@ -129,7 +129,7 @@ base_model.to(device)
 num_train_epochs = 8
 max_steps = 3
 # trained_model_name = f"lamini_docs_{max_steps}_steps"
-trained_model_name = f"/scratch/wej36how/RAG2/lamini_docs_{num_train_epochs}_epochs"
+trained_model_name = f"./lamini_docs_{num_train_epochs}_epochs"
 output_dir = trained_model_name
 
 # Training arguments
@@ -147,7 +147,7 @@ training_args = TrainingArguments(
     eval_steps=10000,  # Evaluate every 120 steps
     logging_strategy="steps",  # Log during training
     logging_steps=1,  # Log every step
-    warmup_steps=1,  # Number of warmup steps
+    warmup_steps=3,  # Number of warmup steps
     gradient_accumulation_steps=4,  # Gradient accumulation
     optim="adafactor",  # Use Adafactor optimizer
     load_best_model_at_end=True,  # Load best model after training
